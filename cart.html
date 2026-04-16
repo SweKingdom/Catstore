@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home - Catsore</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cats.html">Cats</a>
+                <a href="cart.html">Shoppingcart</a>
+                <a href="about.html">About us</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Shoppingcart</h1>
+            <div id="cart-items"></div>
+
+            <form id="order-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" required/>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" required/>
+
+                <label for="address">Address</label>
+                <textarea type="text" id="adress" required></textarea>
+
+                <button type="submit">Order</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>Catstore</p>
+        </footer>
+
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
