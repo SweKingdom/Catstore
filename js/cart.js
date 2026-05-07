@@ -13,7 +13,7 @@ function renderCartItems() {
     }
 
     container.innerHTML='';
-    cart.array.forEach(cat => {
+    cart.forEach(cat => {
         const item = document.createElement('div');
         item.className = 'cart-item';
         item.dataset.id = cat.id
@@ -75,3 +75,40 @@ function validateForm() {
 
   return valid;
 }
+
+function handleOrderSubmit(e) {
+    e.preventDefault();
+    
+    const cart = getCart();
+    if (cart.length === 0) {
+        alert('Your cart is empty! Add some cats before ordering.');
+        return;
+    }
+
+    if (!validateForm())
+        return;
+
+    const name = document.getElementById('customer-name').value.trim();
+    const email = document.getElementById('customer-email').value.trim();
+    const address = document.getElementById('customer-address').value.trim();
+
+    const catList = cart.map(c => `• ${c.name} (${c.origin})`).join('\n');
+
+    alert(
+        `Thank you for your order, ${name}!\n\n` +
+        `Confirmation will be sent to: ${email}\n` +
+        `Delivery address: ${address}\n\n` +
+        `Ordered cats:\n${catList}\n\n` +
+        `We will contact you soon.`
+    );
+
+    localStorage.removeItem('catstore_cart');
+    updateCartCount();
+    document.getElementById('order-form').reset();
+    renderCartItems();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCartItems();
+    document.getElementById('order-form').addEventListener('submit', handleOrderSubmit);
+});

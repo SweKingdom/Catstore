@@ -7,11 +7,11 @@ function getCart() {
 }
 
 function saveCart(cart) {
-    localStorage.setItem('catstore_cart'. JSON.stringify(cart));
+    localStorage.setItem('catstore_cart', JSON.stringify(cart));
 }
 
 function updateCartCount() {
-    const count = document.getElementById('cartCount');
+    const count = document.getElementById('cart-badge');
     if (count) {
         count.textContent = getCart().length;
     }
