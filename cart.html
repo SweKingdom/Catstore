@@ -25,17 +25,20 @@
         </header>
         <main>
             <h1>Shoppingcart</h1>
-            <div id="cart-items"></div>
+            <div id="cart-items-container"></div>
 
-            <form id="order-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" required/>
+            <form id="order-form" novalidate>
+                <label for="customer-name">Name</label>
+                <input type="text" id="customer-name" placeholder="Your full name" required/>
+                <span class="field-error" id="name-error"></span>
 
-                <label for="email">Email</label>
-                <input type="text" id="email" required/>
+                <label for="customer-email">Email</label>
+                <input type="text" id="email" placeholder="you@email.com" required/>
+                <span class="field-error" id="email-error"></span>
 
-                <label for="address">Address</label>
-                <textarea type="text" id="adress" required></textarea>
+                <label for="customer-address">Address</label>
+                <textarea type="text" id="customer-adress" rows="3" placeholder="Street, zip code, city" required></textarea>
+                <span class="field-error" id="adress-error"></span>
 
                 <button type="submit">Order</button>
             </form>
