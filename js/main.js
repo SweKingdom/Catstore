@@ -41,4 +41,10 @@ function isInCart(catId) {
 
 document.addEventListener('DOMContentLoaded', () => {
   updateCartCount();
+    const navToggle = document.querySelector('.nav-toggle');
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            document.querySelector('nav').classList.toggle('open');
+        });
+    }
 });
