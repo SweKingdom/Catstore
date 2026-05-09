@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home - Catsore</title>
-        <link rel="stylesheet" href="style.css"/>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Catstore</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Catstore</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="cats.html">Cats</a>
+            <a href="cart.html">
+                Shopping cart
+                <span id="cart-badge" class="cart-badge">0</span>
+            </a>
+            <a href="about.html">About us</a>
+        </nav>
+        <button class="nav-toggle">&#9776;</button>
+    </header>
 
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Catstore</h1>
+                <a href="cats.html" class="btn-primary">Browse our cats</a>
+            </div>
+        </div>
 
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F3C6;</div>
+                <h3>Premium breeds</h3>
+                <p>A wide selection of purebred cats carefully chosen for health and cutenesse.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#10084;</div>
+                <h3>Raised with love</h3>
+                <p>All our cats are raised with care and love, socialized and ready for their new home.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#x1F512;</div>
+                <h3>Safe shopping</h3>
+                <p>We guarantee a safe purchase with full transparency and support throughout the process.</p>
+            </div>
+        </div>
 
+        <div class="about-teaser">
+            <div class="about-teaser-text">
+                <h2>Why choose Catstore?</h2>
+                <p>Catstore was founded by cat lovers, for cat lovers. I have owned cats for many years and i wish all cats to find the right family.</p>
+                <a href="about.html" class="btn-secondary">Read more about me</a>
+            </div>
+            <div class="img-placeholder">&#x1F43E;</div>
+        </div>
+    </main>
 
-    <body>
-        <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="cats.html">Cats</a>
-                <a href="cart.html">Shoppingcart
-                    <span class="cart-icon-wrapper">
-                        <img
-                            src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_shopping_cart_48px-512.png"
-                            alt="Kundvagn"
-                        />
-                        <span id="cart-badge" class="cart-badge">0</span>
-                    </span>
-                </a>
-                <a href="about.html">About us</a>
-            </nav>
-        </header>
-        <main>
-            <h1>Welcome to out catstore!</h1>
-            <a href="cats.html">To see our cats press here.</a>
-        </main>
+    <footer>
+        <p>Catstore &copy; 2026</p>
+    </footer>
 
-        <footer>
-            <p>Catstore</p>
-        </footer>
-
-        <script src="js/main.js"></script>
-
-    </body>
+    <script src="js/main.js"></script>
+</body>
 </html>
