@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home - Catsore</title>
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="cats.html">Cats</a>
-                <a href="cart.html">Shoppingcart
-                    <span class="cart-icon-wrapper">
-                        <img
-                            src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_shopping_cart_48px-512.png"
-                            alt="Kundvagn"
-                        />
-                        <span id="cart-badge" class="cart-badge">0</span>
-                    </span>
-                </a>
-                <a href="about.html">About us</a>
-            </nav>
-        </header>
-        <main>
-            <h1>Our beutiful cats!</h1>
-            <input type="text" id="search-input" placeholder="Search for cat..."/>
-            <div id="cat-list"></div>
-            <div id="pagination"></div>
-        </main>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cats - Catstore</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Catstore</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cats.html" class="active">Cats</a>
+            <a href="cart.html">
+                Shopping cart
+                <span id="cart-badge" class="cart-badge">0</span>
+            </a>
+            <a href="about.html">About us</a>
+        </nav>
+        <button class="nav-toggle">&#9776;</button>
+    </header>
 
-        <footer>
-            <p>Catstore</p>
-        </footer>
+    <main>
+        <div class="page-header">
+            <h1>Our Cats</h1>
+            <p>Browse our selection of breeds from around the world</p>
+        </div>
+        <div class="cats-controls">
+            <input type="text" id="search-input" placeholder="Search for a breed..." />
+        </div>
+        <div id="cat-list" class="cat-grid"></div>
+        <div id="pagination" class="pagination"></div>
+    </main>
 
-        <script src="js/main.js"></script>
-        <script src="js/cats.js"></script>
+    <footer>
+        <p>Catstore &copy; 2026</p>
+    </footer>
 
-    </body>
+    <script src="js/main.js"></script>
+    <script src="js/cats.js"></script>
+</body>
 </html>
