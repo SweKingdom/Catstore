@@ -51,10 +51,12 @@ function catCard(cat) {
     const card = document.createElement('article');
     card.className = 'cat-card';
 
-    const imageUrl = cat.image?.url;
-    const inCart = isInCart(cat.id)
+    const imageUrl = cat.reference_image_id
+        ? `https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`
+        : 'images/placeholder.gif';
+    const inCart = isInCart(cat.id);
 
-    const imgHtml = `<img class="cat-card-img" src="${imageUrl || 'images/placeholder.gif'}" alt="${cat.name}" loading="lazy" onerror="this.src='images/placeholder.gif'">`;
+    const imgHtml = `<img class="cat-card-img" src="${imageUrl}" alt="${cat.name}" loading="lazy" onerror="this.src='images/placeholder.gif'">`;
     card.innerHTML = `
     ${imgHtml}
     <div class="cat-card-body">
@@ -83,7 +85,9 @@ function handleAddToCart(cat, btn) {
         id: cat.id,
         name: cat.name,
         origin: cat.origin || 'Okänt',
-        imageUrl: cat.image?.url || null,
+        imageUrl: cat.reference_image_id
+            ? `https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`
+            : null,
     })
 
     if (added) {
